@@ -1,0 +1,309 @@
+
+/* Font Embedding */
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #cbac85;
+  font-family: 'Karla', Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 80px;
+}
+
+/*========================================*/
+
+/* Header and Neavigation */
+
+header {
+  background-color: #3e1e04;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 15px;
+}
+
+#logo{
+  display: inline-block;
+}
+
+#header-img {
+  border-radius: 50%;
+  max-width: 80px;
+}
+
+#nav-bar {
+  display: inline-block;
+}
+
+#nav-bar li, .contact-item {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0px 15px;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: #cbac85;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #cbac85;
+  border-radius: 3px;
+  color: 	#3e1e04;
+  transition: .3s;
+}
+
+/*========================================*/
+
+/* Page Container and Landing */
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+section {
+  margin: 80px auto;
+  margin-top: -80px;
+  padding: 10px 20px;
+  padding-top: 80px;
+}
+
+.headline {
+  margin: 0 auto;
+}
+
+.headline h2 {
+  margin: 0;
+}
+
+#home {
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/20160725/pngtree-Spice-Cup-Coffee-Drink-background-photo-379226.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home h2 {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+/*========================================*/
+
+/* Specials */
+
+#specials {
+  background-color: #fff;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.specials-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100%/3);
+}
+
+.specials-item img {
+  max-width: 250px;
+  width: 100%;
+}
+
+.drink-name {
+  color: 	#3e1e04;
+  font-size: 1.5em;
+}
+
+.btn {
+  background-color: #965015;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  height: 30px;
+  width: 80px;
+}
+
+.btn:hover {
+  background-color: #3e1e04;
+  transition: .2s;
+}
+
+/*========================================*/
+
+/* About */
+
+#about {
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-img {
+  margin: 10px;
+  width: 30%;
+}
+
+#about-img img {
+  display: block;
+  width: 100%;
+}
+
+#about-para {
+  padding: 50px 0;
+  width: 50%;
+}
+
+#video {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+}
+
+/*========================================*/
+
+/* Contact and Footer */
+
+#contact {background-color: #cbac85;}
+
+#contact h2, h3 {color: #3e1e04;}
+
+#contact ul {
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.contact-item {
+  margin: 10px;
+  padding: 0;
+}
+
+.contact-item img {
+  border-radius: 50%;
+  display: block;
+  width: 80px;
+}
+
+input[type="email"] {
+  max-width: 280px; 
+  border-radius: 3px;
+  padding: 5px;
+  width: 100%;
+}
+
+.subscribe, footer {
+  text-align: center;
+}
+
+#copy {
+  margin-top: 30px;
+}
+
+#submit {
+  margin: 10px;
+}
+
+/*========================================*/
+
+/* Media Queries */
+
+@media (max-width: 800px){
+  #about-img, #about-para {
+    margin: 10px;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #about-para {
+    font-size: 0.9em;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px){
+  .flex-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    flex-direction: row;
+  }
+  
+  #nav-bar {
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav-bar li {
+    padding: 0 5px;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+  }
+  
+  .contact-item img {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 400px){
+  header {
+    padding: 0 10px;
+  }
+  #nav-bar {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  #logo img {
+    width: 50px;
+  }
+
+  .contact-item img {
+    width: 40px;
+  }
+
+}
